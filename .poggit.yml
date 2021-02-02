@@ -5,4 +5,5 @@ branches:
 projects:
   DuraPopup:
     path: ""
+    icon: icon.png
 ...
