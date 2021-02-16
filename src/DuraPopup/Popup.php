@@ -11,14 +11,8 @@ class Popup extends PluginBase implements Listener
     public function onEnable()
     {
         Server::getInstance()->getPluginManager()->registerEvents($this, $this);
-        Server::getInstance()->getLogger()->info("Plugin enable by refaltor");
     }
-
-    public function onDisable()
-    {
-        Server::getInstance()->getLogger()->info("Plugin disable by refaltor");
-    }
-
+    
     public function onBreak(BlockBreakEvent $event)
     {
         if ($event->isCancelled()) return;
@@ -32,8 +26,4 @@ class Popup extends PluginBase implements Listener
             $player->sendPopup("§6$total / §r§6" . $dura);
         }
     }
-
-
-
 }
-
